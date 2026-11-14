@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "AI_Dance_Studio_Android_Source_v2.zip"
+      - "AI_Dance_Studio.zip"
       - ".github/workflows/build-apk.yml"
 
 jobs:
@@ -23,8 +23,7 @@ jobs:
 
       - name: Extract Android project
         run: |
-          unzip -o AI_Dance_Studio_Android_Source_v2.zip -d android-project
-
+          unzip -o AI_Dance_Studio.zip -d android-project
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
